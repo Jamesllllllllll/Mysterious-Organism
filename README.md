@@ -8,4 +8,4 @@
 > 
 > As you progress through the steps, use the terminal and `console.log()` statements to check the output of your loops and functions. 
 > 
-> Starter code for returnRandBase() and mockUpStrand() is included.
+> Starter code for `returnRandBase()` and `mockUpStrand()` is included.
