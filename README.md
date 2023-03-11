@@ -10,9 +10,7 @@
 > 
 > Starter code for `returnRandBase()` and `mockUpStrand()` is included.
 
-***
-
-First step was to create a Factory Function that creates an object with two key:values - A number (I think for simple enumeration) and a "DNA strand" which is an array of 15 values, which are each a random letter from the available set **D G C T**.
+The first step was to create a Factory Function that creates an object with two key:values - A number (I think for simple enumeration) and a "DNA strand" which is an array of 15 values, which are each a random letter from the available set **D G C T**.
 
 I used a Factory Function example from Codecademy:
 
@@ -39,5 +37,5 @@ I used a lot of console.log() statements on different variables at certain stage
 
 ### Next step:
 
-- [] Write `compareDNA()` that compares *"the current pAequor's .dna with the passed in pAequor's .dna and compute how many bases are identical and in the same locations."* The function does not return anything, but prints a message that states the percentage of the DNA the two objects have in common.
+- [ ] Write `compareDNA()` that compares *"the current pAequor's .dna with the passed in pAequor's .dna and compute how many bases are identical and in the same locations."* The function does not return anything, but prints a message that states the percentage of the DNA the two objects have in common.
 
