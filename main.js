@@ -66,9 +66,11 @@ while (i <= 30) {
   }
 }
 
-// console.log(thirtySpecimens);
+console.log(`***** Create 30 specimens that are likely to survive: *****\n\n`)
 
-console.log(`\n\nCompare two specimens:\n\n`);
+console.log(thirtySpecimens);
+
+console.log(`\n\n***** Compare two specimens: *****\n\n`);
 
 let compare1 = (Math.floor(Math.random() * 30) + 1);
 let compare2 = (Math.floor(Math.random() * 30) + 1);
@@ -79,33 +81,17 @@ do {
 
 console.log(thirtySpecimens[compare1].compareDNA(thirtySpecimens[compare2]));
 
+console.log(`\n\n***** Mutate a specimen: *****`);
+console.log(`\n(change just one DNA base)\n\n`);
 
-/* 
+console.log(thirtySpecimens[compare1]);
+console.log(thirtySpecimens[compare1].mutate());
+console.log(thirtySpecimens[compare1]);
 
-// Make one specimen
-let specimenNum = 1;
-const newPA = pAequorFactory(specimenNum, mockUpStrand());
+console.log("\n\n");
 
-// Make another specimen
-specimenNum++;
-const newPA2 = pAequorFactory(specimenNum, mockUpStrand());
-
-console.log(newPA);
-console.log(newPA.willLikelySurvive())
-console.log(newPA2);
-console.log(newPA2.willLikelySurvive());
-
-console.log(newPA.compareDNA(newPA2));
-
-
-/* Loop through an array:
-
-for (let i = 0; i < array.length; i++){
-  console.log(array[i]);
-}
-
-*/
-
+console.log(`Just for fun, compare specimen #${thirtySpecimens[compare1].specimenNum} and #${thirtySpecimens[compare2].specimenNum} again after mutation:\n`)
+console.log(thirtySpecimens[compare1].compareDNA(thirtySpecimens[compare2]));
 
 console.log("\n\n");
 
