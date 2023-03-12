@@ -20,14 +20,10 @@ const pAequorFactory = (specimenNum, dna) => {
     mutate() {
       let newBase = returnRandBase();
       let changeBase = Math.floor(Math.random() * 15);
-      // console.log(`changeBase variable index: ${changeBase}`);
-      // console.log(`Old base: ${dna[changeBase]}`);
       while (newBase === dna[changeBase]) {
         newBase = returnRandBase();
       }
       dna[changeBase] = newBase;
-      // console.log(`New base: ${newBase}`);
-      // console.log(`Changed base: ${changeBase}\n`);
     },
     compareDNA(compareSpecimen) {
       let inCommon = 0;
@@ -36,23 +32,41 @@ const pAequorFactory = (specimenNum, dna) => {
           inCommon++;
         }
       }
-      // let percentInCommon = ((inCommon / dna.length) * 100);
       inCommon = ((inCommon / dna.length) * 100);
       console.log(`Specimen #${specimenNum} and specimen #${compareSpecimen.specimenNum} have ${inCommon.toFixed(2)}% DNA in common.`);
+    },
+    willLikelySurvive() {
+      let t = 0
+      for (let i = 0; i < dna.length; i++) {
+        if (this.dna[i] === "C" || this.dna[i] === "G") {
+          t++;
+        }
+      }
+      if ((t / dna.length) >= .6) {
+        console.log(`Will likely survive.`);
+        return true;
+      } else {
+        console.log(`Not likely to survive.`);
+        return false;
+      }
     }
   }
 };
 
 console.log("\n");
+
 // Make one specimen
 let specimenNum = 1;
 const newPA = pAequorFactory(specimenNum, mockUpStrand());
+
 // Make another specimen
 specimenNum++;
 const newPA2 = pAequorFactory(specimenNum, mockUpStrand());
 
 console.log(newPA);
+console.log(newPA.willLikelySurvive())
 console.log(newPA2);
+console.log(newPA2.willLikelySurvive());
 
 console.log(newPA.compareDNA(newPA2));
 

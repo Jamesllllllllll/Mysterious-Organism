@@ -39,9 +39,11 @@ I used a lot of console.log() statements on different variables at certain stage
 
 - [x] Write `compareDNA()` that compares *"the current pAequor's .dna with the passed in pAequor's .dna and compute how many bases are identical and in the same locations."* The function does not return anything, but prints a message that states the percentage of the DNA the two objects have in common.
 
-- [ ] *"P. aequor have a likelier chance of survival if their DNA is made up of at least 60% 'C' or 'G' bases.*
+- [x] *"P. aequor have a likelier chance of survival if their DNA is made up of at least 60% 'C' or 'G' bases.*
 
 *In the returned object of pAequorFactory(), add another method .willLikelySurvive().*
 
 *.willLikelySurvive() returns true if the object’s .dna array contains at least 60% 'C' or 'G' bases. Otherwise, .willLikelySurvive() returns false."*
+
+- [ ] *"With the factory function set up, your team requests that you create 30 instances of pAequor that can survive in their natural environment. Store these instances in an array for your team to study later."*
 
