@@ -20,31 +20,52 @@ const pAequorFactory = (specimenNum, dna) => {
     mutate() {
       let newBase = returnRandBase();
       let changeBase = Math.floor(Math.random() * 15);
-      console.log(`changeBase variable index: ${changeBase}`);
-      console.log(`Old base: ${dna[changeBase]}`);
+      // console.log(`changeBase variable index: ${changeBase}`);
+      // console.log(`Old base: ${dna[changeBase]}`);
       while (newBase === dna[changeBase]) {
         newBase = returnRandBase();
       }
       dna[changeBase] = newBase;
-      console.log(`New base: ${newBase}`);
-      console.log(`Changed base: ${changeBase}\n`);
+      // console.log(`New base: ${newBase}`);
+      // console.log(`Changed base: ${changeBase}\n`);
     },
+    compareDNA(compareSpecimen) {
+      let inCommon = 0;
+      for (let i = 0; i < dna.length; i++){
+        if (this.dna[i] === compareSpecimen.dna[i]) {
+          inCommon++;
+        }
+      }
+      // let percentInCommon = ((inCommon / dna.length) * 100);
+      inCommon = ((inCommon / dna.length) * 100);
+      console.log(`Specimen #${specimenNum} and specimen #${compareSpecimen.specimenNum} have ${inCommon.toFixed(2)}% DNA in common.`);
+    }
   }
 };
 
-const specimenNum = 1;
+console.log("\n");
+// Make one specimen
+let specimenNum = 1;
 const newPA = pAequorFactory(specimenNum, mockUpStrand());
-
-console.log("\n");
+// Make another specimen
+specimenNum++;
+const newPA2 = pAequorFactory(specimenNum, mockUpStrand());
 
 console.log(newPA);
+console.log(newPA2);
 
-console.log("\n");
+console.log(newPA.compareDNA(newPA2));
 
-newPA.mutate();
+// Function that compares the values of each element in an array 
+// with the elements of the same index in another array
 
-console.log("After mutating:\n");
-console.log(newPA);
+/* Loop through an array:
+
+for (let i = 0; i < array.length; i++){
+  console.log(array[i]);
+}
+
+*/
 
 console.log("\n\n");
 

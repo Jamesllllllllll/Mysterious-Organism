@@ -1,0 +1,12 @@
+{
+    "vscord.status.details.text.editing": "",
+    "vscord.status.details.text.notInFile": "",
+    "vscord.status.details.text.noWorkSpaceText": "",
+    "vscord.status.details.text.viewing": "",
+    "vscord.status.state.text.editing": "",
+    "vscord.status.state.text.debugging": "",
+    "vscord.status.state.text.noWorkspaceFound": "",
+    "vscord.status.state.text.viewing": "",
+    "vscord.status.image.large.idle.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/{lang}.png",
+    "vscord.status.image.large.notInFile.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/{lang}.png"
+}
