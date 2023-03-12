@@ -43,10 +43,8 @@ const pAequorFactory = (specimenNum, dna) => {
         }
       }
       if ((t / dna.length) >= .6) {
-        console.log(`Will likely survive.`);
         return true;
       } else {
-        console.log(`Not likely to survive.`);
         return false;
       }
     }
@@ -54,6 +52,23 @@ const pAequorFactory = (specimenNum, dna) => {
 };
 
 console.log("\n");
+
+// Create and store 30 instances of pAequor in an array that can survive in their natural environment
+
+let thirtySpecimens = [];
+let i = 1;
+
+while (i <= 30) {
+  temp = pAequorFactory(i, mockUpStrand());
+  if (temp.willLikelySurvive() === true) {
+    thirtySpecimens.push(temp);
+  i++;
+  }
+}
+
+console.log(thirtySpecimens);
+
+/* 
 
 // Make one specimen
 let specimenNum = 1;
@@ -70,8 +85,6 @@ console.log(newPA2.willLikelySurvive());
 
 console.log(newPA.compareDNA(newPA2));
 
-// Function that compares the values of each element in an array 
-// with the elements of the same index in another array
 
 /* Loop through an array:
 
@@ -80,6 +93,7 @@ for (let i = 0; i < array.length; i++){
 }
 
 */
+
 
 console.log("\n\n");
 
