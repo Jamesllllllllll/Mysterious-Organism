@@ -66,7 +66,19 @@ while (i <= 30) {
   }
 }
 
-console.log(thirtySpecimens);
+// console.log(thirtySpecimens);
+
+console.log(`\n\nCompare two specimens:\n\n`);
+
+let compare1 = (Math.floor(Math.random() * 30) + 1);
+let compare2 = (Math.floor(Math.random() * 30) + 1);
+
+do {
+  compare2 = (Math.floor(Math.random() * 30) + 1);
+} while (compare1 === compare2);
+
+console.log(thirtySpecimens[compare1].compareDNA(thirtySpecimens[compare2]));
+
 
 /* 
 
